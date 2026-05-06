@@ -1,0 +1,61 @@
+version: '3.8'
+
+services:
+  # MongoDB for document metadata
+  mongodb:
+    image: mongo:7
+    container_name: chronicles-mongodb
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=chronicles
+    networks:
+      - chronicles-network
+
+  # Backend service with Tesseract OCR
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: chronicles-backend
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/documents:/app/documents
+      - ./backend/output:/app/output
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - OLLAMA_MODEL=llama3.2
+      - OLLAMA_VISION_MODEL=llama3.2-vision
+      - OCR_METHOD=tesseract
+      - MONGODB_URI=mongodb://mongodb:27017
+      - MONGODB_DB=chronicles
+    depends_on:
+      - mongodb
+    networks:
+      - chronicles-network
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  # ChromaDB for vector storage
+  chromadb:
+    image: chromadb/chroma:latest
+    container_name: chronicles-chromadb
+    ports:
+      - "8001:8000"
+    volumes:
+      - chromadb_data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+    networks:
+      - chronicles-network
+
+volumes:
+  mongodb_data:
+  chromadb_data:
+
+networks:
+  chronicles-network:
+    driver: bridge

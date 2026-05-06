@@ -1,0 +1,29 @@
+INVOICE
+
+Invoice Number: INV-2024-001
+Date: January 15, 2024
+
+Bill To:
+ABC Corporation
+123 Business Street
+New York, NY 10001
+
+From:
+Professional Services Inc.
+456 Service Avenue
+Boston, MA 02101
+
+Description                    Quantity    Unit Price    Total
+-----------------------------------------------------------------
+Consulting Services            40 hours    $150.00       $6,000.00
+Project Management            20 hours    $175.00       $3,500.00
+Technical Documentation       10 hours    $125.00       $1,250.00
+
+                                          Subtotal:     $10,750.00
+                                          Tax (8%):        $860.00
+                                          TOTAL:       $11,610.00
+
+Payment Terms: Net 30
+Due Date: February 15, 2024
+
+Thank you for your business!

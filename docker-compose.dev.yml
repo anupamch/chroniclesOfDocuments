@@ -1,0 +1,67 @@
+version: '3.8'
+
+services:
+  # MongoDB for development
+  mongodb-dev:
+    image: mongo:7
+    container_name: chronicles-mongodb-dev
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_dev_data:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=chronicles
+    networks:
+      - chronicles-dev-network
+
+  # ChromaDB for development
+  chromadb-dev:
+    image: chromadb/chroma:latest
+    container_name: chronicles-chromadb-dev
+    ports:
+      - "8001:8000"
+    volumes:
+      - chromadb_dev_data:/chroma/chroma
+    environment:
+      - IS_PERSISTENT=TRUE
+    networks:
+      - chronicles-dev-network
+
+  # Development setup with hot reload
+  backend-dev:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.dev
+    container_name: chronicles-backend-dev
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/app
+      - /app/.venv  # Exclude venv from mount
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:11434
+      - OLLAMA_MODEL=llama3.2
+      - OLLAMA_VISION_MODEL=llama3.2-vision
+      - OCR_METHOD=tesseract
+      - INPUT_FOLDER=/app/documents
+      - OUTPUT_FOLDER=/app/output
+      - MONGODB_URI=mongodb://mongodb-dev:27017
+      - MONGODB_DB=chronicles
+      - CHROMA_HOST=chromadb-dev
+      - CHROMA_PORT=8000
+    depends_on:
+      - mongodb-dev
+      - chromadb-dev
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    networks:
+      - chronicles-dev-network
+    command: python app/main.py
+
+volumes:
+  mongodb_dev_data:
+  chromadb_dev_data:
+
+networks:
+  chronicles-dev-network:
+    driver: bridge

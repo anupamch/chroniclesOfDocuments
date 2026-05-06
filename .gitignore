@@ -1,0 +1,222 @@
+# Environment variables
+.env
+.env.local
+.env.*.local
+.env.production.local
+backend/.env
+frontend/.env.local
+mobile/.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+pip-log.txt
+pip-delete-this-directory.txt
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.cover
+.hypothesis/
+*.pyo
+*.pyd
+.pytype/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.ruff_cache/
+
+# Node.js / Frontend
+node_modules/
+.npm/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+frontend/.npm/
+frontend/.eslintcache
+frontend/.node_repl_history
+frontend/dist/
+frontend/.turbo/
+frontend/coverage/
+frontend/yarn.lock
+frontend/pnpm-lock.yaml
+mobile/node_modules/
+mobile/.expo/
+mobile/.expo-shared/
+mobile/.next/
+mobile/out/
+mobile/dist/
+mobile/yarn.lock
+mobile/pnpm-lock.yaml
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings
+*.iml
+.gradle
+local.properties
+*.log
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# Build artifacts
+backend/output/
+backend/chroma_data/
+frontend/.turbo/
+frontend/coverage/
+
+# Docker
+docker-compose.override.yml
+.dockerignore
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+mongodb/data/
+
+# Local development
+.local/
+tmp/
+temp/
+*.tmp
+
+# Generated files
+*.min.js
+*.min.css
+
+# Credentials and secrets
+secrets.json
+credentials.json
+config.local.json
+.credentials
+
+# Test outputs
+test-results/
+test_results.json
+image_test_results.json
+
+# Documents uploaded during development
+documents/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# pnpm
+pnpm-lock.yaml
+
+# Yarn
+yarn.lock
+
+# Lock files (optional - uncomment if you want to track them)
+# backend/uv.lock
+
+# IDE specific Python
+.pylintrc
+.flake8
+setup.cfg
+tox.ini
+
+# Development scripts output
+*.bak
+*.backup
+
+# API keys and tokens (even if committed accidentally, be aware)
+**/credentials/
+**/tokens/
+**/secrets/
+
+# Ollama and LLM models
+ollama/
+models/
+
+# Temporary files
+*.swp
+*.swo
+*.swn
+*~
+
+# macOS
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# VS Code extensions folder
+.vscode/extensions/
+
+# Production builds
+build/
+dist/
+out/
+
+# Cache directories
+.cache/
+cache/
+*.cache
+
+# Misc
+.prettierignore
+.prettierrc
+.editorconfig
+
+# Keep some important files
+!.gitkeep
+!**/.gitkeep
+**/node_modules/**
+**/dist/**
+**/build/**
+**/out/**
+*.ps1

@@ -1,0 +1,24 @@
+NON-DISCLOSURE AGREEMENT
+========================
+Agreement #: NDA-2024-001
+Effective Date: February 5, 2024
+
+PARTIES:
+- Disclosing Party: Tech Innovations Inc.
+- Receiving Party: Partner Corp
+
+TERMS:
+1. Purpose: To share confidential information regarding new product development.
+
+2. Confidential Information: All technical data, designs, business plans, and trade secrets.
+
+3. Obligations: Receiving Party shall not disclose confidential information to any third party.
+
+4. Duration: This agreement remains in effect for 2 years.
+
+5. Return of Materials: Upon request, Receiving Party shall return all confidential materials.
+
+Signatures:
+_____________________          _____________________
+Tech Innovations Inc.         Partner Corp
+Date: ____________            Date: ____________

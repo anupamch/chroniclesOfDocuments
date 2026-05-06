@@ -1,0 +1,19 @@
+INVOICE
+=======
+Invoice #: INV-2024-003
+Date: February 1, 2024
+Due Date: March 1, 2024
+
+From: Quick Services Inc.
+To: Startup Tech Co.
+
+Items:
+- Technical Consultation: 20 hours x $175 = $3,500
+- Code Review: 10 hours x $150 = $1,500
+- Training Session: 5 hours x $100 = $500
+
+Subtotal: $5,500
+Tax (10%): $550
+TOTAL: $6,050
+
+Payment Terms: Net 30

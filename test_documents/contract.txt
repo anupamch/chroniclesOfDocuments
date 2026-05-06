@@ -1,0 +1,50 @@
+SERVICE AGREEMENT
+
+Contract Number: SA-2024-042
+Effective Date: January 1, 2024
+Expiration Date: December 31, 2024
+
+PARTIES:
+
+Party A (Client): ABC Corporation
+Address: 123 Business Street, New York, NY 10001
+Representative: John Smith, CEO
+
+Party B (Service Provider): Professional Services Inc.
+Address: 456 Service Avenue, Boston, MA 02101
+Representative: Jane Doe, President
+
+TERMS AND CONDITIONS:
+
+1. SCOPE OF SERVICES
+   Party B agrees to provide consulting and technical services to Party A
+   as outlined in the attached Statement of Work.
+
+2. TERM
+   This agreement shall commence on January 1, 2024 and continue through
+   December 31, 2024, unless terminated earlier as provided herein.
+
+3. COMPENSATION
+   Party A agrees to pay Party B at the following rates:
+   - Senior Consultant: $175/hour
+   - Consultant: $150/hour
+   - Technical Writer: $125/hour
+
+4. PAYMENT TERMS
+   Invoices shall be submitted monthly and payment is due within 30 days
+   of invoice date.
+
+5. CONFIDENTIALITY
+   Both parties agree to maintain confidentiality of proprietary information
+   disclosed during the term of this agreement.
+
+6. TERMINATION
+   Either party may terminate this agreement with 30 days written notice.
+
+SIGNATURES:
+
+Party A: _________________________ Date: January 1, 2024
+         John Smith, CEO
+
+Party B: _________________________ Date: January 1, 2024
+         Jane Doe, President
