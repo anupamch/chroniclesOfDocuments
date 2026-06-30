@@ -10,20 +10,13 @@ export default function NewCaseScreen() {
   const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
-  const handleCreate = async () => {
-    if (!caseNumber || !title) {
-      Alert.alert('Error', 'Case Number and Title are required');
-      return;
-    }
+   const handleCreate = async () => {
+     if (!caseNumber || !title) {
+       Alert.alert('Error', 'Case Number and Title are required');
+       return;
+     }
 
-    // Validate case number format (alphanumeric, hyphens, underscores only)
-    const caseNumberRegex = /^[a-zA-Z0-9\-_]+$/;
-    if (!caseNumberRegex.test(caseNumber)) {
-      Alert.alert('Error', 'Case number can only contain letters, numbers, hyphens (-), and underscores (_). Spaces are not allowed.');
-      return;
-    }
-
-    setIsLoading(true);
+     setIsLoading(true);
     try {
       console.log('Creating case with data:', {
         case_number: caseNumber,
