@@ -73,17 +73,17 @@ export default function NewCasePage() {
           )}
 
           <form onSubmit={handleSubmit}>
-            <TextField
-              fullWidth
-              label="Case Number"
-              name="case_number"
-              value={formData.case_number}
-              onChange={handleChange}
-              required
-              placeholder="e.g., CASE-2024-001"
-              helperText="Unique identifier for this case (alphanumeric, hyphens, underscores)"
-              sx={{ mb: 3 }}
-            />
+<TextField
+  fullWidth
+  label="Case Number"
+  name="case_number"
+  value={formData.case_number}
+  onChange={handleChange}
+  required
+  placeholder="e.g., CASE-2024-001"
+  helperText="Unique identifier for this case"
+  sx={{ mb: 3 }}
+/>
 
             <TextField
               fullWidth
